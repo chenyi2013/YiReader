@@ -1,16 +1,88 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="com.kevin.yireader.MainActivity" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    <FrameLayout
+        android:id="@+id/main_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </FrameLayout>
 
-</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_topbar_bg"
+        android:padding="10dp" >
+
+        <RadioGroup
+            android:id="@+id/tab_host"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/read"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:checked="true"
+                android:drawablePadding="2dp"
+                android:drawableTop="@drawable/main_tab_menu_read_selector"
+                android:gravity="center"
+                android:text="@string/cloud_read"
+                android:textColor="@color/main_tab_menu_text_color" />
+
+            <RadioButton
+                android:id="@+id/discover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="2dp"
+                android:drawableTop="@drawable/main_tab_menu_discover_selector"
+                android:gravity="center"
+                android:text="@string/discover"
+                android:textColor="@color/main_tab_menu_text_color" />
+
+            <RadioButton
+                android:id="@+id/friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="2dp"
+                android:drawableTop="@drawable/main_tab_menu_friends_selector"
+                android:gravity="center"
+                android:text="@string/read_group"
+                android:textColor="@color/main_tab_menu_text_color" />
+
+            <RadioButton
+                android:id="@+id/me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
+                android:drawablePadding="2dp"
+                android:drawableTop="@drawable/main_tab_menu_me_selector"
+                android:gravity="center"
+                android:text="@string/me"
+                android:textColor="@color/main_tab_menu_text_color" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/me_info_num_circle"
+            android:text="20"
+            android:textColor="#ffffff"
+            android:textSize="10sp" />
+    </RelativeLayout>
+
+</LinearLayout>
