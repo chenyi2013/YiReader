@@ -4,9 +4,13 @@
     <string name="app_name">YiReader</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="cloud_read">去阅读</string>
+    <string name="cloud_read">云阅读</string>
     <string name="discover">发现</string>
     <string name="read_group">阅读圈</string>
     <string name="me">我</string>
+    <string name="recommend">推荐</string>
+    <string name="subscription">订阅</string>
+    <string name="bookrack">书架</string>
+    <string name="journal">杂志</string>
 
 </resources>

@@ -8,18 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class CloudReadFragment extends Fragment {
+public class RecommendFragment extends Fragment {
 
-	public CloudReadFragment() {
-
+	public RecommendFragment() {
+		// TODO Auto-generated constructor stub
 	}
-
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater,
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		return inflater.inflate(R.layout.cloud_read_fragment_layout, container,
-				false);
+		return inflater.inflate(R.layout.recommend_fragment_layout, container,false);
 	}
 
 }

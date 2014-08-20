@@ -22,7 +22,7 @@ public class DiscoverFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater,
 			@Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-		return inflater.inflate(R.layout.cloud_read_fragment_layout, container,
+		return inflater.inflate(R.layout.discover_fragment_layout, container,
 				false);
 
 	}

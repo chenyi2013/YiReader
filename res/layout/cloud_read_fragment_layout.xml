@@ -3,6 +3,54 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/topbar_bg_2" >
+
+        <RadioGroup
+            style="@android:style/TextAppearance.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/bookrack"
+                style="@style/TopBarItem"
+                android:checked="true"
+                android:text="@string/bookrack" />
+
+            <RadioButton
+                android:id="@+id/subscription"
+                style="@style/TopBarItem"
+                android:text="@string/subscription" />
+
+            <RadioButton
+                android:id="@+id/journal"
+                style="@style/TopBarItem"
+                android:text="@string/journal" />
+
+            <RadioButton
+                android:id="@+id/recommend"
+                style="@style/TopBarItem"
+                android:text="@string/recommend" />
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/home_icon_add_normal" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
 
 </LinearLayout>
