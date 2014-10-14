@@ -1,8 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#ff00ff"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <include
+            android:id="@+id/item1"
+            layout="@layout/discover_frg_top_grid_item" />
+
+        <include
+            android:id="@+id/item2"
+            layout="@layout/discover_frg_top_grid_item" />
+
+        <TextView
+            android:id="@+id/welfare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:drawableLeft="@drawable/home_toolbar_icon_me_press"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="10dp"
+            android:text="充值就送红包，骗您小胖胖10斤" />
+
+        <android.support.v4.view.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#00ff00" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:padding="10dp" >
+
+            <TextView
+                android:id="@+id/today_limit_free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日限免"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="#ff0000" />
+
+            <TextView
+                android:id="@+id/limit_free_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/today_limit_free"
+                android:layout_alignParentRight="true"
+                android:text="限免至：2014-10-13"
+                android:textAppearance="@android:style/TextAppearance.Small" />
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_below="@+id/limit_free_time"
+                android:layout_marginTop="10dp"
+                android:background="#666666" />
+
+            <ImageView
+                android:id="@+id/today_limit_book_img"
+                android:layout_width="wrap_content"
+                android:layout_height="120dp"
+                android:layout_below="@+id/line"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_launcher" />
+
+            <TextView
+                android:id="@+id/today_limit_book_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/today_limit_book_img"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/today_limit_book_img"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="我是若小安1：比苏小小更吃香的"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <TextView
+                android:id="@+id/today_limit_book_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/today_limit_book_name"
+                android:layout_below="@+id/today_limit_book_name"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="在android4.0版本之前，如果想要达到网格布局的效果，首先可以考虑使用最常见的LinearLayout布局，但是这样的排布会产生如下几点问题："
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="#555555" />
+
+            <TextView
+                android:id="@+id/free_obtain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/today_limit_book_content"
+                android:layout_marginTop="10dp"
+                android:padding="5dp"
+                android:text="免费获得"
+                android:textAppearance="@android:style/TextAppearance.Small" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/free_obtain"
+                android:layout_alignLeft="@+id/today_limit_book_content"
+                android:layout_below="@+id/today_limit_book_content"
+                android:text="￥6.2"
+                android:textAppearance="@android:style/TextAppearance.Small"
+                android:textColor="#ff0000" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/public_book_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/public_book"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="出版图书"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginTop="10dp"
+                android:background="#666666" />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
